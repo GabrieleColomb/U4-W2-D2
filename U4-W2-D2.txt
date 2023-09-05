@@ -1,0 +1,23 @@
+--Selezione di tutti i prodotti (tutti i campi)
+Select * From Products;
+
+--Selezione di tutti i prodotti con una quantità disponibile (UnitsInStock) di almeno 40 pezzi
+Select * From Products Where UnitsInStock >= 40;
+
+--Selezione di tutti i clienti (Employees) che abitano a Londra
+Select * From Customers Where City = 'London';
+
+--Selezione di tutti gli ordini, ordinati in ordine decrescente per spese di trasporto (Freight)
+Select * From Orders Order By Freight Desc;
+
+--Selezione degli ordini il cui importo del trasport è superiore a 90 e inferiore a 200
+Select * From Orders Where Freight > 90 And Freight < 200;
+
+--Selezione di tutti i prodotti la cui categoria è "1"
+Select * From Products Where CategoryID = 1;
+
+--Selezione di tutte le righe dei dettagli degli ordini che hanno applicato uno sconto
+Select * From [Order Details]Where Discount > 0;
+
+--Selezione di tutti gli ordini del cliente con ID "BOTTM" le cui spese di trasporto superano l'importo di 50
+Select * From Orders Where CustomerID = 'BOTTM' And Freight > 50;
